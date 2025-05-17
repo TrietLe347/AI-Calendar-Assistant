@@ -18,16 +18,7 @@ A Python desktop calendar assistant built with `Tkinter`, powered by an LLM (Oll
 ---
 
 ## 📁 File Structure
-
-project/
-│
-├── main.py # Launches the GUI
-├── calender_gui.py # Main GUI layout and event loop
-├── calendar_assistant.py # AI-powered intent + event parsing
-├── calendar_views.py # Calendar rendering and display logic
-├── popup_editor.py # Popup for editing and deleting events
-├── events.json # Stored calendar events
-└── README.md # You're reading it!
+<pre> ``` project/ │ ├── main.py # Launches the app ├── calender_gui.py # Main GUI window layout and logic ├── calendar_views.py # Calendar drawing & date click logic ├── popup_editor.py # Edit/delete popup logic ├── calendar_assistant.py # LLM interaction and event classification ├── events.json # Stored calendar events └── README.md # You're reading it ``` </pre>
 
 
 ---
@@ -74,7 +65,7 @@ Uses structured prompts to extract events as:
 "time": "19:00",
 "location": "San Diego"
 }
-
+```
 📌 Future Improvements
 Recurring events
 
