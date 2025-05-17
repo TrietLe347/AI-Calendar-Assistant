@@ -15,13 +15,19 @@ A Python desktop calendar assistant built with `Tkinter`, powered by an LLM (Oll
   - `"delete lunch with John"`
   - `"show all events"`
 
----
-
 ## 📁 File Structure
-<pre> ``` project/ │ ├── main.py # Launches the app ├── calender_gui.py # Main GUI window layout and logic ├── calendar_views.py # Calendar drawing & date click logic ├── popup_editor.py # Edit/delete popup logic ├── calendar_assistant.py # LLM interaction and event classification ├── events.json # Stored calendar events └── README.md # You're reading it ``` </pre>
 
-
----
+```
+project/
+│
+├── main.py                  # Launches the GUI
+├── calender_gui.py          # Main GUI layout and chatbot integration
+├── calendar_views.py        # Calendar rendering and date interactions
+├── popup_editor.py          # Popup window for editing/deleting events
+├── calendar_assistant.py    # LLM integration for parsing and intent detection
+├── events.json              # Stored event data
+└── README.md                # Project documentation
+```
 
 ## 🧪 How It Works
 
@@ -30,8 +36,6 @@ A Python desktop calendar assistant built with `Tkinter`, powered by an LLM (Oll
 3. The assistant saves it into `events.json`
 4. The calendar refreshes and highlights that day
 5. Clicking a date shows all events for that day
-
----
 
 ## 🛠️ Requirements
 
@@ -44,36 +48,40 @@ A Python desktop calendar assistant built with `Tkinter`, powered by an LLM (Oll
   - `datetime`
   - `calendar`
 
----
-
 ## 🚀 Getting Started
 
 1. Install [Ollama](https://ollama.com/)
-2. Start a model: llama3.2  
+2. Start a model:
+   ```
+   ollama run llama3
+   ```
 3. Run the app:
-
-
----
+   ```
+   python main.py
+   ```
 
 ## 🧠 Model Prompting
 
 Uses structured prompts to extract events as:
 ```json
 {
-"title": "Dinner with Mom",
-"date": "2025-05-23",
-"time": "19:00",
-"location": "San Diego"
+  "title": "Dinner with Mom",
+  "date": "2025-05-23",
+  "time": "19:00",
+  "location": "San Diego"
 }
 ```
-📌 Future Improvements
-Recurring events
 
-Timezone and date localization
+Also includes a lightweight intent classifier to handle commands like `"view upcoming"` or `"delete event"`.
 
-Drag-to-add events
+## 📌 Future Improvements
 
-Sync with Google Calendar or Outlook
+- Recurring events
+- Timezone and date localization
+- Drag-to-add events
+- Sync with Google Calendar or Outlook
+- Advanced natural language (e.g. "every Monday at 5pm")
 
-Advanced natural language (e.g. "every Monday at 5pm")
+## 📃 License
 
+MIT License
